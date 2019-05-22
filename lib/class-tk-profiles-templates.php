@@ -137,7 +137,6 @@ if ( ! class_exists( 'TK_Profiles_Templates' ) ) {
 
 				foreach ( $templates as $template ) {
 					if ( file_exists( $template ) ) {
-                        echo("test " . $template);
 						return $template;
 					}
 				}
