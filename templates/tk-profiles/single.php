@@ -36,7 +36,8 @@ if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
 		?>
-	<div class="wrapper-xs wrapper-pd">
+	    <div class="main wrapper-lg" style="margin-top:1em">
+        <div class="wrapper-xs-pd" style="margin-right: 1em; margin-left:1em">
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="jadu-cms">
 				<?php the_content(); ?>
@@ -44,6 +45,7 @@ if ( have_posts() ) {
 			</div>
 		</div>
 	</div>
+        </div>
 		<?php
 	}
 }
@@ -69,7 +71,9 @@ if ($loop->have_posts()) {
 
     ?>
 
-    <div class="row card-flat  skin-bd-b " style="min-height:4em;"></div>
+
+
+    <div class="row card-flat  skin-bd-b " style="min-height:1em;"><h2>Featured projects:</h2></div>
 
     <?php
 

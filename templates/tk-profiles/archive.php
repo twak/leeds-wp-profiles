@@ -37,7 +37,7 @@ if ( get_field( 'tk_profiles_page_settings_show_breadcrumb', 'option' ) ) {
 ?>
 
 <div class="tk-profiles-list-wrapper">
-	<h1>foo</h1><h2 class="tk-profiles-heading">test<?php echo esc_html( $profiles_page_title ); ?></h2>
+
 <?php
 if ( $intro ) {
 	?>
