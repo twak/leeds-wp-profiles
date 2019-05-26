@@ -42,12 +42,13 @@ if ( ! class_exists( 'TK_Profiles_Admin' ) ) {
 		 * @return array new $posts_columns.
 		 */
 		public function add_profiles_columns( $posts_columns ) {
-			unset( $posts_columns['date'] );
+            unset( $posts_columns['date'] );
+//            unset( $posts_columns['tk_profiles_last_name'] );
 			$posts_columns['title']                  = 'Full Name';
-			$posts_columns['tk_profiles_first_name'] = 'First Name';
-			$posts_columns['tk_profiles_last_name']  = 'Surname';
+//			$posts_columns['tk_profiles_first_name'] = 'First Name';
+//			$posts_columns['tk_profiles_last_name']  = 'Surname';
 			$posts_columns['external']               = 'External';
-			$posts_columns['tk_profile_category']    = 'Categories';
+//			$posts_columns['tk_profile_category']    = 'Categories';
 			return $posts_columns;
 		}
 
