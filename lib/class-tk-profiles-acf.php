@@ -249,9 +249,6 @@ if ( ! class_exists( 'TK_Profiles_ACF' ) ) {
 						'choices'           => array(
 							'featured_image'            => 'Profile Image',
 							'post_title'                => 'Full name',
-							'tk_profiles_title'         => 'Title',
-							'tk_profiles_first_name'    => 'First name',
-							'tk_profiles_last_name'     => 'Last name',
 							'tk_profiles_email'         => 'Email',
 							'tk_profiles_telephone'     => 'Telephone',
 							'tk_profiles_faculty'       => 'Faculty',
@@ -348,6 +345,12 @@ if ( ! class_exists( 'TK_Profiles_ACF' ) ) {
 						'name'  => 'tk_profiles_job_title',
 						'type'  => 'text',
 					),
+                    array(
+                        'key'   => 'field_tk_profiles_bibtex_name',
+                        'label' => 'Bibtex name',
+                        'name'  => 'tk_profiles_bibtex_name',
+                        'type'  => 'text',
+                    ),
 					array(
 						'key'   => 'field_tk_profiles_external_link',
 						'label' => 'External Profile Link',

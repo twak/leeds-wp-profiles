@@ -71,9 +71,10 @@ if ($loop->have_posts()) {
 
     ?>
 
+    <div class="main wrapper-lg">
+    <div class="wrapper-xs-pd" style="margin-right: 1em; margin-left:1em">
 
-
-    <div class="row card-flat  skin-bd-b " style="min-height:1em;"><h2>Featured projects:</h2></div>
+    <h2>Projects:</h2>
 
     <?php
 
@@ -88,7 +89,7 @@ if ($loop->have_posts()) {
 
         <!--        <div class="card-flat card-stacked-xs skin-bd-b skin-box-module">-->
 
-        <div class="row card-flat  skin-bd-b " style="min-height:11em;">
+        <div class="row card-flat  skin-bd-b skin-box-module  " style="min-height:11em;">
             <div>
                 <div class="col-sm-2">
                     <a href="<?php echo esc_url($profile_link); ?>">
@@ -130,7 +131,8 @@ if ($loop->have_posts()) {
         </div>
 
         <?php
-    }
+    }?>
+    </div> </div> <?php
 }
 
 get_footer();
