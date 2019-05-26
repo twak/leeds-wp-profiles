@@ -348,8 +348,26 @@ if ( ! class_exists( 'TK_Profiles_ACF' ) ) {
                     array(
                         'key'   => 'field_tk_profiles_bibtex_name',
                         'label' => 'Bibtex name',
+                        'instructions' => 'used as search/replace on bibtex to highlight this profile',
                         'name'  => 'tk_profiles_bibtex_name',
                         'type'  => 'text',
+                    ),
+                    array(
+                        'key'   => 'field_tk_profiles_bibtex_url',
+                        'label' => 'Bibtex url',
+                        'instructions' => 'the whiterose search url to return your bibtex entries (search for <a href="http://eprints.whiterose.ac.uk/cgi/search/advanced">yourself</a>, then <b>export</b> results as <b>bibtex</b>Z), shortened by <a href=\'http://bit.ly\'>bit.ly</a>',
+                        'placeholder' => 'https://bit.ly/2M55R8u',
+                        'name'  => 'tk_profiles_bibtex_url',
+                        'type'  => 'text',
+                    ),
+                    array(
+                        'key'          => 'field_tk_profiles_external_link_flag',
+                        'name'         => 'tk_profiles_external_link_flag',
+                        'type'         => 'checkbox',
+                        'instructions' => 'Ticking this box will make profile forward to the external profile below.',
+                        'choices'      => array(
+                            'external_link' => 'Make this profile external',
+                        ),
                     ),
 					array(
 						'key'   => 'field_tk_profiles_external_link',
@@ -375,31 +393,31 @@ if ( ! class_exists( 'TK_Profiles_ACF' ) ) {
 			/**
 			 * External link profile
 			 */
-			acf_add_local_field_group( array(
-				'key'      => 'group_tk_profiles_external_link_flag',
-				'title'    => 'External profile',
-				'fields'   => array(
-					array(
-						'key'          => 'field_tk_profiles_external_link_flag',
-						'name'         => 'tk_profiles_external_link_flag',
-						'type'         => 'checkbox',
-						'instructions' => 'Ticking this box will make this profile link to the external profile.',
-						'choices'      => array(
-							'external_link' => 'Make this profile external',
-						),
-					),
-				),
-				'location' => array(
-					array(
-						array(
-							'param'    => 'post_type',
-							'operator' => '==',
-							'value'    => 'tk_profiles',
-						),
-					),
-				),
-				'position' => 'side',
-			));
+//			acf_add_local_field_group( array(
+//				'key'      => 'group_tk_profiles_external_link_flag',
+//				'title'    => 'External profile',
+//				'fields'   => array(
+//					array(
+//						'key'          => 'field_tk_profiles_external_link_flag',
+//						'name'         => 'tk_profiles_external_link_flag',
+//						'type'         => 'checkbox',
+//						'instructions' => 'Ticking this box will make this profile link to the external profile.',
+//						'choices'      => array(
+//							'external_link' => 'Make this profile external',
+//						),
+//					),
+//				),
+//				'location' => array(
+//					array(
+//						array(
+//							'param'    => 'post_type',
+//							'operator' => '==',
+//							'value'    => 'tk_profiles',
+//						),
+//					),
+//				),
+//				'position' => 'side',
+//			));
 		}
 	}
 	new TK_Profiles_ACF();
