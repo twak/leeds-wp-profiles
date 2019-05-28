@@ -355,7 +355,7 @@ if ( ! class_exists( 'TK_Profiles_ACF' ) ) {
                     array(
                         'key'   => 'field_tk_profiles_bibtex_url',
                         'label' => 'Bibtex url',
-                        'instructions' => 'the whiterose search url to return your bibtex entries (search for <a href="http://eprints.whiterose.ac.uk/cgi/search/advanced">yourself</a>, then <b>export</b> results as <b>bibtex</b>Z), shortened by <a href=\'http://bit.ly\'>bit.ly</a>',
+                        'instructions' => 'the whiterose search url to return your bibtex entries (search for <a href="http://eprints.whiterose.ac.uk/cgi/search/advanced">yourself</a>, then <b>export</b> results as <b>bibtex</b>), finally shorten with <a href=\'http://bit.ly\'>bit.ly</a>',
                         'placeholder' => 'https://bit.ly/2M55R8u',
                         'name'  => 'tk_profiles_bibtex_url',
                         'type'  => 'text',

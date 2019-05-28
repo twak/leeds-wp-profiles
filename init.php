@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: twak's Profiles
- * Plugin URI: https://github.com/
+ * Plugin Name: twak's profiles
+ * Plugin URI: https://github.com/twak/leeds-wp-profiles
  * GitHub Plugin URI: https://github.com/
  * Description: This plugin adds toolkit profiles.
  * Version: 0.0.¾
  * Author: Application Development, University of Leeds + twak
- * Author URI: https://github.com/
+ * Author URI: https://github.com/twak/leeds-wp-profiles
  */
 
 /**
