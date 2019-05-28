@@ -80,57 +80,8 @@ if ($loop->have_posts()) {
 
     // Page is not split by category.
     while ($loop->have_posts()) {
-
         $loop->the_post();
-        $profile_link = apply_filters('tk_profile_url', '', get_the_id());
-        $name = get_the_title();
-
-        ?>
-
-        <!--        <div class="card-flat card-stacked-xs skin-bd-b skin-box-module">-->
-
-        <div class="row card-flat  skin-bd-b skin-box-module  " style="min-height:11em;">
-            <div>
-                <div class="col-sm-2">
-                    <a href="<?php echo esc_url($profile_link); ?>">
-                        <?php
-                        if (has_post_thumbnail()) {
-                            // Check if Thumbnail exists.
-                            ?>
-                            <div>
-                                <img width="140em" src='<?php the_post_thumbnail_url('sq512'); ?>'
-                                     alt='"<?php echo esc_attr($name); ?>"'/>
-                            </div>
-                            <?php
-                        } else {
-                            ?>
-
-                            <div style="max-height:10em">
-                                <div class="rs-img"></div>
-                            </div>
-
-
-                            <?php
-                        }
-                        ?>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <a href="<?php echo esc_url($profile_link); ?>">
-                        <h2 style="font-family: freight-display-pro; margin-top:0.5em"><?php the_title(); ?></h2>
-
-                        <?php
-                        $value = get_field('all_authors');
-                        if ($value)
-                            echo('<h3 style="text-align: left">' . $value . '</h3>');
-                        ?>
-                    </a>
-                </div>
-                </a>
-            </div>
-        </div>
-
-        <?php
+        twak_inner_project();
     }?>
     </div> </div> <?php
 }
