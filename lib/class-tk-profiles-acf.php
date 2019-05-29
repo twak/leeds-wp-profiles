@@ -362,6 +362,7 @@ if ( ! class_exists( 'TK_Profiles_ACF' ) ) {
                     ),
                     array(
                         'key'          => 'field_tk_profiles_external_link_flag',
+                        'label'        =>  'external profile?',
                         'name'         => 'tk_profiles_external_link_flag',
                         'type'         => 'checkbox',
                         'instructions' => 'Ticking this box will make profile forward to the external profile below.',
