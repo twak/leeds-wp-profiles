@@ -12,7 +12,7 @@ $profile_id = get_queried_object_id();
 $external_url = apply_filters( 'tk_profile_url', '', $profile_id );
 $permalink = get_permalink( $profile_id );
 if ( $external_url !== $permalink ) {
-	wp_safe_redirect( $external_url );
+    wp_redirect( $external_url );
 	exit;
 }
 
