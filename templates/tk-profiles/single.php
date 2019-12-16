@@ -32,9 +32,11 @@ if ( get_field( 'tk_profiles_page_settings_show_breadcrumb', 'option' ) ) {
 	</div>
 	<?php
 }
+
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();
+
 		?>
 	    <div class="main wrapper-lg" style="margin-top:1em">
         <div class="wrapper-xs-pd" style="margin-right: 1em; margin-left:1em">
