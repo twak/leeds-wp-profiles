@@ -6,4 +6,4 @@
  */
 
 ?>
-<div class="tk-profiles-cards-wrapper">
+<div class="row clearfix equalize">

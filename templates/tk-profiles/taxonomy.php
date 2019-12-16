@@ -38,8 +38,8 @@ get_header();
 
 if ( get_field( 'tk_profiles_page_settings_show_breadcrumb', 'option' ) ) {
 	?>
-	<div class="tk-profiles-breadcrumb-wrapper">
-		<ul class="tk-profiles-breadcrumb">
+	<div class="wrapper-pd-xs">
+		<ul class="breadcrumb">
 			<li><a href="<?php echo esc_url( site_url() ); ?>">Home</a></li>
 			<li><a href="<?php echo esc_url( $profiles_url ); ?>"><?php echo esc_html( $profiles_title ); ?></a></li>
 	<?php
@@ -59,12 +59,12 @@ if ( get_field( 'tk_profiles_page_settings_show_breadcrumb', 'option' ) ) {
 }
 ?>
 
-<div class="tk-profiles-wrapper">
+<div class="wrapper-md wrapper-pd">
 	<h1 class="heading-underline"><?php echo esc_html( $pagetitle ); ?></h1>
 <?php
 if ( $intro ) {
 	?>
-	<div class="tk-profiles-text-wrapper">
+	<div class="wrapper-md">
 		<?php echo $intro; ?>
 	</div>
 	<?php
@@ -151,7 +151,7 @@ if ( $term ) {
 
 if ( $outro ) {
 	?>
-	<div class="tk-profiles-text-wrapper">
+	<div class="wrapper-md">
 		<?php echo $outro; ?>
 	</div>
 	<?php

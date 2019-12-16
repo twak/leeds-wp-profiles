@@ -56,8 +56,8 @@ if ( $loop->have_posts() ) {
 		if ( count( $profile_categories ) > 1 ) {
 			foreach ( $profile_categories as $profile_category ) {
 				?>
-<div class="tk-profiles-text-wrapper">
-	<h4 class="tk-profiles-heading"><?php echo esc_html( $profile_category->name ); ?></h4>
+<div class="content-header">
+	<h4 class="content-header-heading content-header-heading-underline pull-left"><?php echo esc_html( $profile_category->name ); ?></h4>
 </div>
 				<?php
 				load_template( apply_filters( 'tk_profiles_template', $template_name, 'header' ), false );

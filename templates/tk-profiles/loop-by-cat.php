@@ -92,8 +92,8 @@ if ( $term ) {
 		// Only output headings if there is more than one category.
 		if ( count( $category_tabs ) > 1 ) {
 			?>
-				<div class="tk-profiles-tabs-wrapper">
-					<ul class="tk-profiles-tabs">
+				<div class="tk-tabs-header" style="margin-bottom:1em;">
+					<ul class="nav nav-tabs tk-nav-tabs pull-left">
 			<?php
 			foreach ( $category_tabs as $tab ) {
 				print( $tab );

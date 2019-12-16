@@ -90,6 +90,7 @@ if ( ! class_exists( 'TK_Profiles_Templates' ) ) {
 		public function archive_template( $archive_template ) {
 			global $wp_query;
 
+
 			if ( $this->is_archive() || $this->is_tax() ) {
 
 				// Collect candidates for tempaltes here.
@@ -118,7 +119,7 @@ if ( ! class_exists( 'TK_Profiles_Templates' ) ) {
 						 */
 						$templates[] = get_stylesheet_directory() . '/' . $this->template_dir . '/taxonomy-' . $tax . '.php';
 						$templates[] = get_template_directory() . '/' . $this->template_dir . '/taxonomy-' . $tax . '.php';
-						$templates[] = dirname( __DIR__ ) . '/' . $this->template_dir . '/taxonomy-' . $tax . '.php';
+						$templates[] = dirname( __DIR__ ) . '/' . $this->template_dir . '/taxonomy.php';
 
 						/**
 						 * Now check for a generic taxonomy
@@ -136,6 +137,8 @@ if ( ! class_exists( 'TK_Profiles_Templates' ) ) {
 				$templates[] = dirname( __DIR__ ) . '/' . $this->template_dir . '/archive.php';
 
 				foreach ( $templates as $template ) {
+
+
 					if ( file_exists( $template ) ) {
 						return $template;
 					}
@@ -168,27 +171,40 @@ if ( ! class_exists( 'TK_Profiles_Templates' ) ) {
 		 * @param string $name - template name.
 		 * @return string $path - full path to template.
 		 */
-		public function template_part( $slug, $name ) {
-			// First get the paths for the template from the $slug and $name.
-			$template_paths = array();
-			$name           = (string) $name;
-			if ( '' !== $name ) {
-				$template_paths[] = $this->template_dir . "/{$slug}-{$name}.php";
-			}
-			$template_paths[] = $this->template_dir . "/{$slug}.php";
-			// Use locate_template to see if there is a template in the Theme/Child Theme.
-			$template = locate_template( $template_paths, false, false );
-			// If no theme template, locate the correct one in the plugin.
-			if ( '' === $template ) {
-				foreach ( $template_paths as $template_path ) {
-					if ( file_exists( dirname( __DIR__ ) . '/' . $template_path ) ) {
-						$template = dirname( __DIR__ ) . '/' . $template_path;
-						break;
-					}
-				}
-			}
-			return $template;
-		}
+		public function template_part( $slug, $name )
+        {
+            // First get the paths for the template from the $slug and $name.
+            $template_paths = array();
+            $name = (string)$name;
+
+            return dirname(__FILE__) . "/../templates/tk-profiles/{$slug}-{$name}.php";
+        }
+//			if ( '' !== $name ) {
+//				$template_paths[] = $this->template_dir . "/{$slug}-{$name}.php";
+//			}
+//			$template_paths[] = $this->template_dir . "/{$slug}.php";
+//			// Use locate_template to see if there is a template in the Theme/Child Theme.
+//
+////            echo $name. " foobar " .;
+////            echo $name. "foobar" . print_r( $template_paths );
+//
+//            print_r($template_paths);
+//
+//			$template = locate_template( $template_paths, false, false );
+//			// If no theme template, locate the correct one in the plugin.
+//
+//            if ( '' === $template ) {
+//                foreach ( $template_paths as $template_path ) {
+//					if ( file_exists( dirname( __DIR__ ) . '/' . $template_path ) ) {
+//
+//						$template = dirname( __DIR__ ) . '/' . $template_path;
+//						break;
+//					}
+//				}
+//			}
+//            echo $template;
+//			return $template;
+//		}
 	}
 	new TK_Profiles_Templates();
 }

@@ -139,11 +139,8 @@ if ( ! class_exists( 'TK_Profiles_Shortcodes' ) ) {
 							break;
 						default:
 
-							if ( $numberposts > 1 ) {
-								load_template( apply_filters( 'tk_profiles_template', 'cards', 'row' ), false );
-							} else {
-								load_template( apply_filters( 'tk_profiles_template', 'cards', 'single' ), false );
-							}
+						    load_template( apply_filters( 'tk_profiles_template', 'cards', 'row' ), false );
+
 							break;
 					}
 					$profile_html[] = ob_get_clean();
